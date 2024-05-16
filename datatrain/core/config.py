@@ -14,5 +14,8 @@ if not os.path.exists(WORKLOAD_DIR):
 
 # create script paths
 outliers_script_path = os.path.join(PROJECT_ROOT, 'datatrain', 'core', 'codebase', 'outliers.py')
+zscore_script_path = os.path.join(PROJECT_ROOT, 'datatrain', 'core', 'codebase', 'z-score.py')
 
-
+# set cleared paths
+task1path = os.path.join(WORKLOAD_DIR, 'task1.csv')
+task2path = os.path.join(WORKLOAD_DIR, 'task2.csv')
