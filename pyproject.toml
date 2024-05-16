@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "datatrain"
+version = "0.1.0"
+description = "Tooluri multi purpose"
+authors = ["Rares Sarmasag <raressarmasag@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.1.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+titanic-cli = 'datatrain.core.cli.client:main'
