@@ -8,7 +8,7 @@ if PROJECT_ROOT is None:
     raise EnvironmentError('Variabila de mediu PROJECT_ROOT nu este setată.')
 
 # create work directory
-WORKLOAD_DIR = os.path.join(PROJECT_ROOT, 'workload')
+WORKLOAD_DIR = os.path.join(PROJECT_ROOT,'datatrain', 'workload')
 if not os.path.exists(WORKLOAD_DIR):
     os.makedirs(WORKLOAD_DIR)
 
