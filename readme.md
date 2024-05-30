@@ -61,8 +61,14 @@ reprezentând o fundație solidă pentru _construirea_ și _distribuirea_ aplica
 **controlat**.
 
 ## Instalare
-+ ``git clone https://github.com/rares9301/datatrain.git``
-+ ``pip install .``
+1. Source Code Download   
+   ```shell
+   git clone https://github.com/rares9301/datatrain.git
+   ```
+2. Package Install
+   ```shell
+   pip install .
+   ```
 
 ## Utilizare:
 Pentru a rula scriptul folositi `titanic-cli` urmat de urmatoarele flaguri: 
