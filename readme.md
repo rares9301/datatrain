@@ -1,8 +1,8 @@
-# Proiect PCLP3 - datatrain
+# Proiect PCLP3
 > Rareș-Andrei Sărmășag, 312CB - Ⓒ licensed under (GPLv3+)
+<h1 align="center"><img src="https://capsule-render.vercel.app/api?type=soft&fontColor=709ee5&text=rares9301/datatrain&height=160&fontSize=50&desc=Efficient,%20fast%20and%20light-weight.&descAlignY=75&descAlign=61&color=00000000"></h1>
 
 ## Motivația proiectului
-
 **Python** s-a impus ca limbaj esențial în domeniile Data Science și Inteligență Artificială, în special în ceea ce 
 privește explorarea datelor și dezvoltarea de modele, datorită _ecosistemului_ său extins de biblioteci specializate. 
 Biblioteci precum **numpy**, **pandas**, **matplotlib** și **seaborn** oferă instrumente avansate pentru manipularea, 
