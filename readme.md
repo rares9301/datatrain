@@ -1,4 +1,4 @@
-# Proiect PCLP3
+# Proiect PCLP3 - datatrain
 > Rareș-Andrei Sărmășag, 312CB - Ⓒ licensed under (GPLv3+)
 
 ## Motivația proiectului
