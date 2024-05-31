@@ -109,7 +109,8 @@ fișier CSV.
    + **Calculul Z-score**:
      + Pentru fiecare coloană specificată în `columns`, codul calculează media (`mean`) și deviația standard (`std`) a coloanei.
      + Se creează o nouă coloană (`z_score_column`) care conține **Z-score**-ul calculat pentru fiecare valoare din coloană, folosind formula:
-       ![zscore](datatrain/graphs/zscore.png)
+       
+        ![zscore](datatrain/graphs/zscore.png)
            
        unde (`X`) este valoarea individuală din coloană.
      + Valorile pentru care **Z-score**-ul absolut este mai _mare_ decât pragul specificat (`zscore_threshold`) sunt considerate _outlier_-i și sunt eliminate din setul de date.
