@@ -1,6 +1,6 @@
 # Proiect PCLP3
 > Rareș-Andrei Sărmășag, 312CB - Ⓒ licensed under (GPLv3+)
-<h1 align="center"><img src="https://capsule-render.vercel.app/api?type=soft&fontColor=709ee5&text=rares9301/datatrain&height=160&fontSize=50&desc=Efficient,%20fast%20and%20light-weight.&descAlignY=75&descAlign=61&color=00000000"></h1>
+<h1 align="center"><img src="https://capsule-render.vercel.app/api?type=soft&fontColor=709ee5&text=rares9301/datatrain&height=160&fontSize=50&desc=Efficient,%20fast%20and%20light-weight.&descAlignY=75&descAlign=61&color=00000000&animation=fadeIn"></h1>
 
 ## Motivația proiectului
 **Python** s-a impus ca limbaj esențial în domeniile Data Science și Inteligență Artificială, în special în ceea ce 
@@ -90,14 +90,28 @@ reprezentând o fundație solidă pentru _construirea_ și _distribuirea_ aplica
 ## Taskuri implementate:
 
 ### Outlier Detection 
- + Elimină **outlier**-ii din coloanele specificate ale unui fișier CSV. Calculează **Q1** și **Q3** și Intervalul 
+Elimină **outlier**-ii din coloanele specificate ale unui fișier CSV. Calculează **Q1** și **Q3** și Intervalul 
 Interquartil (**IQR**) pentru fiecare coloană, apoi folosește aceste valori pentru a defini limitele de outlier-i. 
 Valorile dincolo de aceste limite sunt **eliminate**, iar setul de date curățat este salvat într-un nou fișier CSV.
 
+   + **Calculul IQR**: 
+     + Pentru fiecare coloană specificată în `columns`, se calculează **percentilele Q1 și Q3**.
+     + **IQR** este diferența dintre aceste două percentile (Q3 - Q1).
+     + Se stabilește **limita inferioară și superioară** pentru _outlier_-i folosind formula:
+       + <img src="http://www.sciweavers.org/tex2img.php?eq=%20%5Ctext%7Blower\_bound%7D%20%3D%20Q1%20-%201.5%20%5Ctimes%20IQR&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt=" \text{lowerebound} = Q1 - 1.5 \times IQR" width="233" height="17" />
+       + <img src="http://www.sciweavers.org/tex2img.php?eq=%5Ctext%7Bupper\_bound%7D%20%3D%20Q3%20%2B%201.5%20%5Ctimes%20IQR&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="\text{upperebound} = Q3 + 1.5 \times IQR" width="236" height="17" />
+ 
 ### Z-Score 
- + Calculează Z-score pentru fiecare valoare din coloanele specificate ale unui fișier CSV. Valorile care au un **Z-score**
+Calculează **Z-score** pentru fiecare valoare din coloanele specificate ale unui fișier CSV. Valorile care au un **Z-score**
 mai mare decât un **prag** prestabilit (_implicit 3_) sunt eliminate. Setul de date curățat este apoi salvat într-un nou 
 fișier CSV.
+
+   + **Calculul Z-score**:
+     + Pentru fiecare coloană specificată în `columns`, codul calculează media (`mean`) și deviația standard (`std`) a coloanei.
+     + Se creează o nouă coloană (`z_score_column`) care conține **Z-score**-ul calculat pentru fiecare valoare din coloană, folosind formula:
+          + <img src="http://www.sciweavers.org/tex2img.php?eq=Z%20%3D%20%20%5Cfrac%7B%28X%20-%20mean%29%7D%7Bstd%7D%20&bc=White&fc=Black&im=png&fs=12&ff=modern&edit=0" align="center" border="0" alt="Z =  \frac{(X - mean)}{std} " width="126" height="38" />
+       unde (`X`) este valoarea individuală din coloană.
+     + Valorile pentru care **Z-score**-ul absolut este mai _mare_ decât pragul specificat (`zscore_threshold`) sunt considerate _outlier_-i și sunt eliminate din setul de date.
 
 ## Validarea datelor 
 
