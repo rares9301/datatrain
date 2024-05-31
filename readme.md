@@ -90,9 +90,9 @@ reprezentând o fundație solidă pentru _construirea_ și _distribuirea_ aplica
 ## Taskuri implementate:
 
 ### Outlier Detection 
-Elimină **outlier**-ii din coloanele specificate ale unui fișier CSV. Calculează **Q1** și **Q3** și Intervalul 
-Interquartil (**IQR**) pentru fiecare coloană, apoi folosește aceste valori pentru a defini limitele de outlier-i. 
-Valorile dincolo de aceste limite sunt **eliminate**, iar setul de date curățat este salvat într-un nou fișier CSV.
+Calculează **Q1** și **Q3** și Intervalul Interquartil (**IQR**) pentru fiecare coloană, apoi folosește aceste valori 
+pentru a defini limitele de outlier-i. Valorile dincolo de aceste limite sunt **eliminate**, iar setul de date curățat 
+este salvat într-un nou fișier CSV.
 
    + **Calculul IQR**: 
      + Pentru fiecare coloană specificată în `columns`, se calculează **percentilele Q1 și Q3**.
