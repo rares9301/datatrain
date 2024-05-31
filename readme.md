@@ -147,6 +147,20 @@ fișier CSV.
 
 ![commits](metrics.png)
 
+## Contributing
+> Eventuale sugestii sau modificări sunt așteptate cu căldură. 🌟
+
+## `>` [Author](https://github.com/rares9301)
+
+---
+### Rareș-Andrei Sărmășag
+_student at Polithenica Bucuresti - Faculty of Automatic Control and Computer Science_
+
+Seria CB-312 @ CTI 2024
+
+contact email: [rares.sarmasag@stud.acs.upb.ro](mailto:rares.sarmasag@stud.acs.upb.ro).
+
+discord: _ap0
 
 ## `>` [License](license.md) / [Disclaimer](disclaimer.md) 
 
