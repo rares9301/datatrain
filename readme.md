@@ -32,6 +32,10 @@ posibilele valori aberante. Această abordare formală și metodică este esenț
    ```shell
    pip install .
    ```
+3. PROJECT_ROOT config
+   ```shell
+   export PROJECT_ROOT="$HOME/path/to/project/dir"
+   ```
 
 ## Utilizare:
 Pentru a rula scriptul folositi `titanic-cli` urmat de urmatoarele flaguri: 
@@ -89,7 +93,7 @@ reprezentând o fundație solidă pentru _construirea_ și _distribuirea_ aplica
 
 ## Taskuri implementate:
 
-### Outlier Detection 
+### `Task 1` Outlier Detection 
 Calculează **Q1** și **Q3** și Intervalul Interquartil (**IQR**) pentru fiecare coloană, apoi folosește aceste valori 
 pentru a defini limitele de outlier-i. Valorile dincolo de aceste limite sunt **eliminate**, iar setul de date curățat 
 este salvat într-un nou fișier CSV.
@@ -101,7 +105,7 @@ este salvat într-un nou fișier CSV.
        + ![lower_bound](datatrain/graphs/lower.png)
        + ![upper_bound](datatrain/graphs/upper.png)
  
-### Z-Score 
+### `Task 2` Z-Score 
 Calculează **Z-score** pentru fiecare valoare din coloanele specificate ale unui fișier CSV. Valorile care au un **Z-score**
 mai mare decât un **prag** prestabilit (_implicit 3_) sunt eliminate. Setul de date curățat este apoi salvat într-un nou 
 fișier CSV.
