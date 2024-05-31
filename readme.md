@@ -22,6 +22,33 @@ _curățăm_ setul de date Titanic prin eliminarea acestor **valori aberante**, 
 posibilele valori aberante. Această abordare formală și metodică este esențială pentru asigurarea integrității datelor 
 înainte de a trece la etapele ulterioare de modelare și predicție.**
 
+
+## Instalare
+1. Source Code Download   
+   ```shell
+   git clone https://github.com/rares9301/datatrain.git
+   ```
+2. Package Install
+   ```shell
+   pip install .
+   ```
+
+## Utilizare:
+Pentru a rula scriptul folositi `titanic-cli` urmat de urmatoarele flaguri: 
+1. Tipuri de proces:
+   - `-ol`, `--outliers`: Setează ca proces eliminarea outlier-ilor.
+   - `-zs`, `--zscore`: Setează ca proces curățarea de tip Z-score.
+2. Setarea coloanelor:
+   - `-c`, `--columns` `{coloane}`: coloanele care vor fi folosite, ca string delimitat de `,`.
+     - opțional threshold-ul pentru z-score separat prin spațiu
+3. Calea catre fisier:
+   - `-p`, `--path`: calea catre CSV-ul pe care vrei sa-l cureti.
+
+    ### Exemple
+    ``titanic-cli -zs -c Age,SibSp 3 --path datatrain/datasets/train.csv``
+
+    ``titanic-cli -ol -c Age,SibSp --path datatrain/datasets/train.csv``
+
 ## Structura codului
 
 Proiectul este structurat pentru a asigura **modularitate** și **claritate**, facilitând dezvoltarea și întreținerea. 
@@ -59,32 +86,6 @@ aderă la standardele moderne ale **Python** pentru configurarea proiectelor, of
 _utilizat_. Această abordare contribuie la **eficiența dezvoltării** și la **scalabilitatea** proiectului pe termen lung,
 reprezentând o fundație solidă pentru _construirea_ și _distribuirea_ aplicațiilor Python într-un mod **organizat** și 
 **controlat**.
-
-## Instalare
-1. Source Code Download   
-   ```shell
-   git clone https://github.com/rares9301/datatrain.git
-   ```
-2. Package Install
-   ```shell
-   pip install .
-   ```
-
-## Utilizare:
-Pentru a rula scriptul folositi `titanic-cli` urmat de urmatoarele flaguri: 
-1. Tipuri de proces:
-   - `-ol`, `--outliers`: Setează ca proces eliminarea outlier-ilor.
-   - `-zs`, `--zscore`: Setează ca proces curățarea de tip Z-score.
-2. Setarea coloanelor:
-   - `-c`, `--columns` `{coloane}`: coloanele care vor fi folosite, ca string delimitat de `,`.
-     - opțional threshold-ul pentru z-score separat prin spațiu
-3. Calea catre fisier:
-   - `-p`, `--path`: calea catre CSV-ul pe care vrei sa-l cureti.
-
-    ### Exemple
-    ``titanic-cli -zs -c Age,SibSp 3 --path datatrain/datasets/train.csv``
-
-    ``titanic-cli -ol -c Age,SibSp --path datatrain/datasets/train.csv``
 
 ## Taskuri implementate:
 
